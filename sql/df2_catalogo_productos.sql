@@ -3,7 +3,6 @@
 --
 -- GRANO DECLARADO: una fila = ...............................
 
-USE olist;
 SELECT 
     o.order_id AS 'ID de Pedido',
     o.order_status AS 'Estado',

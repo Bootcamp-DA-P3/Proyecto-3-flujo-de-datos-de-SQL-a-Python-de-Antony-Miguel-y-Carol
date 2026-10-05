@@ -4,7 +4,6 @@
 -- GRANO DECLARADO: una fila = ...............................
 -- (rellenad esta linea ANTES de escribir el primer JOIN)
 
-use olist;
 SELECT COUNT(DISTINCT customer_unique_id) AS total_clientes
 FROM customers;
 SELECT c.customer_state, 

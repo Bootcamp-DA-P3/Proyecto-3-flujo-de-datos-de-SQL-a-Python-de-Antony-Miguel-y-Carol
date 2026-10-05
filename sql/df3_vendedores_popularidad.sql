@@ -3,8 +3,6 @@
 --
 -- GRANO DECLARADO: Una fila representa la actividad acumulada de un producto único comercializado por un vendedor específico
 
-USE olist;
-
 SELECT 
     LOWER(TRIM(s.seller_city)) AS seller_city_clean,
     LOWER(TRIM(s.seller_state)) AS seller_state_clean,
