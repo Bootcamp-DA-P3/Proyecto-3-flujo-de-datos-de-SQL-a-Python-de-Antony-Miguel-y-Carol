@@ -1,0 +1,5 @@
+Esta carpeta guarda el CSV que exporta vuestro script.
+
+Su contenido NO se sube al repositorio: esta en .gitignore.
+Este fichero solo existe para que la carpeta viaje con el repo
+y el script no falle con FileNotFoundError al ejecutarlo.
