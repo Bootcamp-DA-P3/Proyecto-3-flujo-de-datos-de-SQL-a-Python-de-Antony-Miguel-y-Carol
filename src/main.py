@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine, text
-from confing import *
+from config import *
 import pandas as pd
 
 # Create a database connection
@@ -27,7 +27,7 @@ def get_data_list_from_join():
     """Obtener datos de vendedores, productos y ventas"""
     conecction = conecction_db()
     with conecction:
-        join_query_sql = """ """ 
+        join_query_sql = """  
             SELECT 
                 LOWER(TRIM(s.seller_city)) AS seller_city_clean,
                 LOWER(TRIM(s.seller_state)) AS seller_state_clean,
@@ -57,7 +57,7 @@ def get_data_list_from_join():
                 ingreso_total_producto DESC;
         """
     
-        result = connection.execute(text(join_query_sql))
+        result = conecction.execute(text(join_query_sql))
         rows = result.fetchall()
         columns = result.keys()
 
@@ -76,5 +76,5 @@ def get_data_list_from_join():
         return df
         
 if __name__ == "__main__":
-    test_connection()
+    test_conecction()
     get_data_list_from_join()
