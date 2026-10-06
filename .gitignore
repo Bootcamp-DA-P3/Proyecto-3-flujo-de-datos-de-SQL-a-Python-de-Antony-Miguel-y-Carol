@@ -20,3 +20,6 @@ __pycache__/
 
 # Datos pesados (opcional, según el proyecto)
 data/raw/
+
+# Ficheros CSV
+data/df3_vendedores_popularidad.csv
