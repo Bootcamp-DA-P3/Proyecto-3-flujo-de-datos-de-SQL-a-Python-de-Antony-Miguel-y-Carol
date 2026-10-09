@@ -32,3 +32,12 @@ if _faltan:
         f"Faltan variables en el .env: {', '.join(_faltan)}.\n"
         "Copia .env_example a .env y rellena tus credenciales."
     )
+
+# Carpetas de trabajo
+CARPETA_QUERIES = RAIZ / "sql"
+CARPETA_OUTPUT = RAIZ / os.getenv("DATA_FOLDER", "data")
+
+# Excel. El ETL no disena el dashboard: solo crea el libro si no existe,
+# apunta a las fuentes y lo abre.
+EXCEL_FILE = RAIZ / os.getenv("EXCEL_FILE", "dashboard/Olist_Dashboard.xlsx")
+AUTO_OPEN_EXCEL = os.getenv("AUTO_OPEN_EXCEL", "true").lower() == "true"
